@@ -46,3 +46,6 @@ stato dei mezzi
 percorso
 ### trips
 percorsi
+
+# trips_pointv3.parquet
+descrizione dei campi in questo testo oppure riferimento ad un python notebook
