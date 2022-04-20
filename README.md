@@ -1,5 +1,5 @@
 # escooter trento
-**Stage di Luisa Lo Presti**
+**Stage di Luisa Lo Presti**<br/>
 Analisi dei dati della mobilità su monopattino elettrico della città di Trento
 
 ## Attività svolte: 
