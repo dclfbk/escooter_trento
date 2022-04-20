@@ -17,3 +17,6 @@ esistono varie librerie e applicazioni che permettono di gestire i GTFS
 analogo a GTFS ma studiato per il Bike Sharing ed ora adattato anche per i monopattini elettrici.
 ### documentazione ufficiale
 - https://github.com/NABSA/gbfs
+
+### tools
+- https://bikeitaly.github.io/gbfs-viewer/
