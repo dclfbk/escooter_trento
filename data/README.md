@@ -42,7 +42,37 @@ Alcune keywords importanti:
 ### Noleggi
 Informazioni sul noleggio:
 - `noleggibit_id.parquet`: contiente informazioni sul noleggio di e-scooter dell'operatore BIT. I campi descritti sono _lastid_, _maxid_, _incid_ e _stato_. _Stato_ è una variabile binaria che assume valori 0 o 1.
-- `noleggibit_storico.parquet`: contiene lo storico dei noleggi dell'operatore BIT, dal 2020-11-30 al 2022-02-19. Contiene i campi _id_ (numpy integer, identificativo della corsa), *start_time* e *stop_time* (di tipo str; contenenti i giorno e orario di inizio e fine della corsa), *inizio* e *fine* (di tipo pd.Timestamp; contententi i timestamp di inizio e fine corsa), *start_tmda* e *stop_tmal* (di tipo datetime.time; contenti orario in ore-minuti-secondi rispettivamente di inizio e fine corsa), *giorno_set* (numpy integer; indica il giorno della settimana in cui la corsa è stata svolta), *break_time* (numpy integer; indica il tempo in secondi della sosta??), *start_latitude*, *start_longitude*, *stop_longitude* e *stop_latitude* (type decimal.Decimal; indicano rispettivamente la latitudine e la longitudine a inizio corsa e a fine corsa), *trip_km* (decimal.Decimal; indica i chilometri percorsi durante il viaggio), *data_start* e *data_stop* (type datetime.date;indicano rispettivamente la data, in formato anno-mese-giorno, di inizio e fine corsa), *tempo* (None values), *ora_start* e *ora_stop* (type str; contententi ora-minuti-secondi di inizio e fine corsa), *sec_start* e *sec_stop* (numpy integer; orario di inizio e fine corsa in secondi), *sec_diff* (numpy integer; differenza tra *sec_start* e *sec_stop*), *sec_diffeff* (?), *min_diff* (integer; differenza tra *sec_start* e *sec_stop* in minuti), *min_secdiff* (?), *device_id* (integer; unique identifier del dispositivo), *fascia_standard* (integer compreso tra 0 e 5), *fascia_stdes* (str; assume valori '12-16', '8-12', '20-22', '16-20', '6-8', 'Fuori fascia'), *fascia_custom* (integer compreso tra 0 e 7), *fascia_csdes* (str; assume valori '12-14', '9-12', '7-9', '19-22', '17-19', '14-17', 'Fuori fascia', '6-7'), *fascia_standard_it1* (integer compreso tra 0 e 5), *fascia_stdes_it1* (str; assume valori '12-16', '8-12', '20-22', '16-20', 'Fuori fascia', '6-8'), *fascia_custom_it1* (integer compreso tra 0 e 7), *fascia_csdes_it1* (str; assume valoro '14-17', '12-14', '9-12', '19-22', '17-19', '7-9', 'Fuori fascia', '6-7'), *fascia_standard_it2* (integer compreso tra 0 e 5), *fascia_stdes_it2* (str; contiene valori '12-16', '8-12', '20-22', '16-20', '6-8', 'Fuori fascia'), *fascia_custom_it2* (integer compreso tra 0 e 7), *fascia_csdes_it2* (str; assume valori '14-17', '12-14', '9-12', 'Fuori fascia', '19-22', '17-19', '7-9', '6-7'), *tempoda* e *tempoal* (type decimal.Decimal; tempo da/a ??), *tempodiff* (None values), e *device_name* (stringa alfanumerica indicante il nome del dispositivo).
+- `noleggibit_storico.parquet`: contiene lo storico dei noleggi dell'operatore BIT, dal 2020-11-30 al 2022-02-19. Contiene i campi: 
+    - _id_ (numpy integer, identificativo della corsa);
+    - *start_time* e *stop_time* (di tipo str; contenenti i giorno e orario di inizio e fine della corsa);
+    - *inizio* e *fine* (di tipo pd.Timestamp; contententi i timestamp di inizio e fine corsa);
+    - *start_tmda* e *stop_tmal* (di tipo datetime.time; contenti orario in ore-minuti-secondi rispettivamente di inizio e fine corsa);
+    - *giorno_set* (numpy integer; indica il giorno della settimana in cui la corsa è stata svolta);
+    - *break_time* (numpy integer; indica il tempo in secondi della sosta??);
+    - *start_latitude*, *start_longitude*, *stop_longitude* e *stop_latitude* (type decimal.Decimal; indicano rispettivamente la latitudine e la longitudine a inizio corsa e a fine corsa);
+    - *trip_km* (decimal.Decimal; indica i chilometri percorsi durante il viaggio);
+    - *data_start* e *data_stop* (type datetime.date;indicano rispettivamente la data, in formato anno-mese-giorno, di inizio e fine corsa);
+    - *tempo* (None values);
+    - *ora_start* e *ora_stop* (type str; contententi ora-minuti-secondi di inizio e fine corsa);
+    - *sec_start* e *sec_stop* (numpy integer; orario di inizio e fine corsa in secondi);
+    - *sec_diff* (numpy integer; differenza tra *sec_start* e *sec_stop*), *sec_diffeff* (?);
+    - *min_diff* (integer; differenza tra *sec_start* e *sec_stop* in minuti);
+    - *min_secdiff* (?);
+    - *device_id* (integer; unique identifier del dispositivo), *fascia_standard* (integer compreso tra 0 e 5);
+    - *fascia_stdes* (str; assume valori '12-16', '8-12', '20-22', '16-20', '6-8', 'Fuori fascia');
+    - *fascia_custom* (integer compreso tra 0 e 7);
+    - *fascia_csdes* (str; assume valori '12-14', '9-12', '7-9', '19-22', '17-19', '14-17', 'Fuori fascia', '6-7');
+    - *fascia_standard_it1* (integer compreso tra 0 e 5);
+    - *fascia_stdes_it1* (str; assume valori '12-16', '8-12', '20-22', '16-20', 'Fuori fascia', '6-8');
+    - *fascia_custom_it1* (integer compreso tra 0 e 7);
+    - *fascia_csdes_it1* (str; assume valoro '14-17', '12-14', '9-12', '19-22', '17-19', '7-9', 'Fuori fascia', '6-7');
+    - *fascia_standard_it2* (integer compreso tra 0 e 5);
+    - *fascia_stdes_it2* (str; contiene valori '12-16', '8-12', '20-22', '16-20', '6-8', 'Fuori fascia');
+    - *fascia_custom_it2* (integer compreso tra 0 e 7);
+    - *fascia_csdes_it2* (str; assume valori '14-17', '12-14', '9-12', 'Fuori fascia', '19-22', '17-19', '7-9', '6-7');
+    - *tempoda* e *tempoal* (type decimal.Decimal; tempo da/a ??);
+    - *tempodiff* (None values);
+    - *device_name* (stringa alfanumerica indicante il nome del dispositivo).
 - `noleggi_idstatus.parquet`: stato dei noleggi. Contiene: _operator_ (str; BIT o VENTO), _prog_ e _endtime_ (entrambi contententi NaN values), _lastdt_ (None values), *var_data* (type string; data, nel formato anno-mese-giorno), *var_tempo* (string; 'T'+ ora del giorno, da '00' a '23'), *stato* (int; assume valori 0 o 1 e indica lo status del noleggio al tempo e giorno indicato nei rispettivi campi)
 - `noleggi_status.parquet`: 
 
