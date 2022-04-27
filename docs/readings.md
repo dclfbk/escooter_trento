@@ -15,3 +15,8 @@ Other potential barriers to the use of e-scooters, reported by the respondent as
 The study also takes into consideration the advantages of introducing e-cargo bikes, which are thought to be crucial for the European Commission’s goal to “achieve essentially CO₂-free city logistics in major urban centres by 2030”. This kind of service is still rare, although in Tricity e-bikes were sometimes equipped with baskets. The latter was not designed to carry big weights and commercial purposes were not allowed, even though food delivery usage was tolerated. The main barrier to the diffusion of e-cargo bikes seems to be the lack of a standardized regulation.
 
 All in all, e-scooters were significantly less popular than e-bikes, people did not see their usefulness and perceived them as not safe, besides complaining about their high prices. Improving availability and distribution, as well as taking actions to teach people how to properly use these transports may be a good step to grant further adoption of e-scooters.
+
+## [Analysis of E-Scooter Trips and Their Temporal Usage Patterns](https://www.researchgate.net/publication/333634549_Analysis_of_E-Scooter_Trips_and_Their_Temporal_Usage_Patterns)
+
+Brief analysis providing an overview of temporal patterns and performance metrics of e-scooters trips in Indianapolis, with data collected from September 4, 2018 for 3 months.
+
