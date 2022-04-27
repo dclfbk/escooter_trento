@@ -16,3 +16,6 @@ Visualizzazione delle traiettorie in `trips_pointv3.parquet` e inizio a comparar
 - Plot delle traiettorie di un giorno random con layer control per selezionare le tratte, ordinate per lunghezza del percorso
 - Individuare i punti di fermata più comuni; plot barchart con le fermate che appaiono più di 50 volte, riportando il nome del luogo; mappa con le fermate che appaiono più di 50 volte, con markers di colori diversi in base alla frequenza
 - Uso di pyrosm per ottenere i dati della posizione delle fermate del trasporto pubblico. Plot di questi punti e dei più frequenti punti di fine corsa degli e-scooter per controllare se le corse dei monopattini si concludono nelle vicinanze delle fermate del trasporto pubblico. In caso affermativo, questo suggerirebbe che gli e-scooters potrebbero essere stati usati come mezzo per raggiungere un altro trasporto e non solo per divertimento. Infatti l'uso di e-scooter per tratte molto brevi suggerisce che potrebbero essere stati usati solo per il divertimento della corsa e in questo contesto non sarebbero propriamente una risorsa per la mobilità sostenibile.
+
+## monopattini_streets.ipynb
+Estrae i percorsi dai monopattini (da verificare meglio) ed applica il map matching.
