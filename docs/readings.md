@@ -1,9 +1,6 @@
 # Readings
 
-## Electric Scooter Sharing and Bike Sharing User Behaviour and Characteristics
-download: https://www.mdpi.com/2071-1050/12/22/9640<br/>
-
-### Summary
+## [Electric Scooter Sharing and Bike Sharing User Behaviour and Characteristics](https://www.mdpi.com/2071-1050/12/22/9640)
 
 The paper aims to analyze the differences between e-bike users and e-scooter users and to outline their travelling behavior, based on data collected via questionnaires addressed at 633 citizens of Tricity (Poland). The overview proposed by this study is meant to be of help for the creation of new policies, as a successful transport plan, aimed at overcoming urban problems (such as transport costs, traffic congestion, air pollution, space occupied by cars and cars accidents), needs to take into account the characteristics of the groups of people using these transports and their travelling behaviors.
 
@@ -20,3 +17,38 @@ All in all, e-scooters were significantly less popular than e-bikes, people did 
 
 Brief analysis providing an overview of temporal patterns and performance metrics of e-scooters trips in Indianapolis, with data collected from September 4, 2018 for 3 months.
 
+## [Spatial analysis of shared e-scooter trips](https://www.sciencedirect.com/science/article/pii/S0966692321000697)
+
+The paper studies the factors influencing e-scooters trips in Louisville using a Geographical Weighted Regression (GWR). It considers several categories of variables related to demographics, density, diversity of land-use, design, urbanism scores, distance from bus stops and other transport related factors, and discovers 7 variables to be the most significant (age, gender, commercial land-use, public/semi-public spaces, mixed-use index-MXI, walk score and park score). The results also show that the relationship between these factors and the density of e-scooters trips varies significantly in relation to the subarea considered. The walk score is the only factor significant across all the areas concerned by this study, even though with different magnitude of effect.
+The study also shows that GWR has significantly improved the explainatory potential of Ordinary Least Squares (OLS), which was used as a baseline of comparison but also as a means to identify relationships between indipendent variables and the dependent one and to ensure multicollinearity between indipendent variables was avoided.
+
+For what concerns the _age_ variables, it was found that individuals between 18 and 29 years old are more likely to engage in the use of e-scooters. In particular, in the northwest part of the study area, the GWR model assigned strong relationships between age group and e-scooter trips. The influence of this factor varies considerably, suggesting the possibility of a latent difference in the 18-29 years old population across the whole area, such as potential different access to private vehicles. _Gender_ was found to be significant in the eastern area and _commercial land-use_ was significantly more influential in the western part. _Public and semi-public spaces_ have the greatest influence on e-scooters trips in the southwest area, especially around the University of Louisville, categorized by a large population of students and major area of employment. The *Mixed-Use Index*, which is supposed to be low when there is a good balance between residential and other land-uses, is highly influential near the Ohio River and around Waterfront Park. 
+Finally, the _Park Score_ has the greatest impact on e-scooters usage on the southwest area. 
+Interesting may be the fact that the significance of the Park Score may be due to the use of e-scooters for recreational purposes rather than as a means of transport. In this case, one may want to consider the reasons of the lack of significance of this factor in other areas characterized by the presence of parks, such as the influence of low-income.
+
+As a conclusion, the study suggests there may be unobserved latent variables contributing to the variance in the coefficients, such as the presence of the University of Louisville's campus which is likely to be a driver of the differences among _public spaces_ coefficents. In this case, one could possibly prove that campuses are different from other public spaces, and that they may have peculiarities influencing the phenomenon of e-scooters trips, such as the number or type of people. Finally, the study proposes further researches considering temporal characteristics, routes choices and trips length.
+
+
+## [Explaining shared micromobility usage, competition and mode choice by modelling empirical data from Zurich, Switzerland](https://www.sciencedirect.com/science/article/pii/S0968090X20308445)
+
+This study develops a methodology to model and analyse shared micromobility choices in a comparative manner, taking into account dockless e-bikes, docked e-bikes, docked bikes and dockless e-scooters, from two different companies. The main aim is to cover the existing gap in literature concerning possible competition between micromobility modes and mode choices considering more than two alternatives. 
+
+To conduct this analysis, a variety of data have been collected using accessible companies APIs, covering the time period between 1 January and 29 February 2020 and involving information about external (such as environment, geography, and weather) and trip-related factors (such as destinations, distance, time of day), while user information was not available.
+In order to avoid as much as possible the introduction of errors and biases in the study, anomalies have been removed. Firstly, trips where the battery charge is higher at the end of the trip than at the beginning have been erased. Moreover, trips more than an hour long were removed as they are attributed to vehicles redistribution on the territory. The only bias detected in the end concerns fewer short rides for docked e-bikes and bikes (5–12 min) and slightly longer trips (more than 17 minutes), which may be due to “trip chaining” (when a bike is both returned and rented again between two queries, the successive rides are identified as one).
+
+From a first heatmap of frequent destinations, it is possible to observe that dockless e-scooters and docked bikes are mostly used in Zurich’s city centre with clear hotspots at the main public transport stations. Docked e-bikes show additional hotspots at the universities’ main campuses, while dockless e-bikes seems to be the most widespread.
+Considering the temporal dimension, it seems that shared bikes in general are used mostly during the morning and evening peaks, while e-scooters have a much smaller peak during the morning, a high peak during the evening and a much greater usage at night (8pm-4am) than shared bikes. E-scooters are also used for significantly shorter trips (median 730 m against 1292m and 1595m of bikes and e-bikes).
+The plot by battery charge reveals that very few e-scooters and dockless e-bikes show low battery charges (below 20%) at trip start, which may mean that battery charge is a relevant criterion for mode choice as users can check this data from their smartphone apps.
+
+In order to develop a methodology to define user choices and behaviours, for each trip, all vehicles available within a 2 min walking distance were identified so that a choice situation could be defined, where one mode from a specific company was chosen while others were available. Besides vehicle density, other attributes used to define the choice are time of the day, elevation difference between start and end of the trip, distance, battery charge, and price. Thus, for example, one can notice that even though dockless e-scooters are available in 62–85% of all choice situations, they are only chosen in 20–29% of all cases when available (i.e., they are not chosen in 71–80% of all cases when available).
+
+The study then proceeds in analyzing the causes behind the different choices probabilities, by exploring bivariate relationships between choice attributes and choice probabilities for each company and mode. 
+
+The results show particularly strong patterns by time and by length of the trip (when trips get longer, the probability of choosing e-scooters drops). E-scooter choice probability is the highest at 0 elevation and increases at higher battery level (with a plateau effect at which higher levels do not increase the probability of usage). Dockless modes gain from higher vehicle density, while the choice probability at low vehicle density is much higher for docked e-bikes and bikes than for dockless modes, which may suggest differences in the choice process for docked and dockless micromobility vehicles.
+
+Finally, they used a multinomial logit model (inspired by McFadden study, 1974) to explore the joint effect on mode choice.
+
+This model shows that micromobility mode choice is most strongly and significantly influenced by distance (positively for e-bikes/bikes and negatively for e-scooters). The morning peak strongly and positively influences mode choice for docked micromobility (e-bikes and bikes) and strongly but negatively for dockless e-scooters, while at night, this effect reverses. This suggests that docked e-bikes and bikes are preferred for commuting, while dockless e-scooters are chosen for other trips.
+Increasing vehicle density increases choice probability for all modes, but dockless e-scooters exhibit the highest utility gains. This also suggests high competition among companies as if vehicle density increases for one, the other loses most choice probability in comparison to other modes.
+
+The main limitation of this analysis is the lack of consideration of user-specific attributes, such as socio-demographics, and additional modes of transport, such as public transport and walking.
