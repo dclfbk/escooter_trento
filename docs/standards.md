@@ -22,7 +22,7 @@ analogo a GTFS ma studiato per il Bike Sharing ed ora adattato anche per i monop
 - https://bikeitaly.github.io/gbfs-viewer/
 
 
-### [Mobility Data Specification - Open Mobility Foundation](https://github.com/openmobilityfoundation/mobility-data-specification)
+## [Mobility Data Specification - Open Mobility Foundation](https://github.com/openmobilityfoundation/mobility-data-specification)
 
 The Mobility Data Specification [(MDS)](https://www.openmobilityfoundation.org/about-mds/#:~:text=time%20and%20money.-,MDS%E2%80%94%E2%80%9CMobility%20Data%20Specification%E2%80%9D%E2%80%94is%20a%20digital%20tool,scooter%20and%20bike%2Dshare%20companies.) defined by the Open Mobility Foundation (OMF) is a framework for standardizing and sharing mobility data, helping operators and cities to exchange information in a standard format. MDS has six distinct APIs: the main one are the *provider*, the *agency*,  and the *policy*, while other APIs are the *geography*, the *jurisdiction*, and the *metrics*.
 *Provider* and *agency* express a common language about how data should be shaped, while the *policy* API is a common language for rules and regulations, enabling cities to set rules that operators have to follow. 
