@@ -52,3 +52,23 @@ This model shows that micromobility mode choice is most strongly and significant
 Increasing vehicle density increases choice probability for all modes, but dockless e-scooters exhibit the highest utility gains. This also suggests high competition among companies as if vehicle density increases for one, the other loses most choice probability in comparison to other modes.
 
 The main limitation of this analysis is the lack of consideration of user-specific attributes, such as socio-demographics, and additional modes of transport, such as public transport and walking.
+
+
+## [Understanding spatio-temporal heterogeneity of bike-sharing and scootersharing mobility](https://www.sciencedirect.com/science/article/pii/S0198971519305812)
+
+This study conducts a comparative analysis to understand spatio-temporal heterogeneity of bike-sharing and scooter-sharing mobility in two urban areas of Singapore.
+The success of these services is influenced by the business model (e.g., transformation from a dockless system to a dock-based system), users' behaviors (e.g., returning scooters away from stations), weather and government policy, which are the main concerns of this study.
+The results show that shared scooters have spatially compact and quantitatively denser distribution compared with shared bikes, and their high demands associate with places such as touristic attractions, metros, and the university dormitory. Results suggest that scooter-sharing has a better performance than bike-sharing in terms of the increased sharing frequency and decreased fleet size; however, the shareability still has potential to be improved. Overall, bikes and scooters trips were similar in spatial distribution while substantially difference in temporal patterns.
+Noteworthy is the attempt to minimize GPS random shifts away from the edges of the real street network (accuracy issue): the complete set of origins and destinations are repositioned onto the closest node in the graph taking advantage of OpenStreetMap.
+
+Seven indices are proposed to describe the performance of the two sharing services: the fleet size of bikes/scooters, the density of the fleet size, the number of the real trips over 28 days, the sharing frequency per bike/scooter per day, the overall repositioning ratio, the repositioning ratio for rebalancing, and the repositioning ratio for charging.
+
+A “heatmap” of the paths was produced, reporting path segments colored according to the number of times these paths were travelled. The most popular areas for trips are touristic trips and campus parts of interest for university students.
+The hourly distribution of the total distance of the trips and the number of trips on weekdays and weekends were also estimated and plotted. Plots show that the highest demands always happen at night, which may indicate that people use shared micro-mobility when public transports are unavailable.
+To compare the distribution of trips distances and durations of the two services, the curve of the average distance and the one of the number of trips over the trip duration was drawn.
+Overall, with the increase of the trip duration, the average distance grows stably, approaching an upper boundary at 2 km, while the number of trips has a dramatic increase followed by a long and decreasing tail.
+Correlation between the number of trips with hour, day, temperature and weather conditions was studied, and the importance of rebalancing and battery charging was discussed. 
+With regards to these analysis, several interesting policy solutions were proposed.
+
+
+## [Agent-based models for simulating e-scooter sharing services: A review and a qualitative assessment](https://www.sciencedirect.com/science/article/pii/S2046043022000016)
