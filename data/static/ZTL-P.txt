@@ -1,0 +1,18 @@
+In questa cartella sono contenuti i file (shape) della ZTL -P dove sono elencati i punti  per inibire le soste ai monopattini.
+
+Sulla segnaletica che delimita la ZTL-P è già stabilito il limite dei 10 km/h e il divieto di sosta eccetto i soggetti autorizzati.
+
+Segue elenco delle vie della ZTL in cui è non consentita la sosta (non inserite nello shape file):
+via Alfieri
+Via Belenzani
+Piazza D'Arogno 
+Via Esterle (nel tratto compreso tra piazza Adamo d'Arogno e Via Giovanni Prati) 
+Via Mazzini
+Via S. Vigilio
+Via Garibaldi
+Vicolo del Liceo 
+Vicolo Niccolini
+passaggio Zippel
+tutti i vicoli e le gallerie della ZTL-CS (gallerie dei legionari, dei partigiani, tirrena, ...)
+
+
