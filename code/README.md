@@ -32,5 +32,5 @@ Utilizza inoltre varie funzioni di generalizzazione, tra cui l'algoritmo Douglas
 ## monopattini_streets.ipynb
 Estrae i percorsi dai monopattini (da verificare meglio) ed applica il map matching.
 
-## dataviz_spostamenti_monopattini.ipynb (to fix)
-Riproduce quanto presente nell'articolo [Stop detection in GPS tracks — Movingpandas & KeplerGl](https://towardsdatascience.com/stop-detection-in-gps-tracks-movingpandas-keplergl-point-map-with-stops-duration-in-bird-664064b3ccbc). 
+## dataviz_spostamenti_monopattini.ipynb 
+Ricalca quanto presente nell'articolo [Stop detection in GPS tracks — Movingpandas & KeplerGl](https://towardsdatascience.com/stop-detection-in-gps-tracks-movingpandas-keplergl-point-map-with-stops-duration-in-bird-664064b3ccbc) e produce l'animazione presente in `dataviz_spostamenti_2022.html`, dove è possibile visualizzare, in base al periodo, le corse avvenute nei primi mesi del 2022, distinte per operatore.
