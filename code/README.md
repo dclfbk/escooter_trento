@@ -1,5 +1,13 @@
 # Elenco dei codice scritto
 
+## 0_clean_data.ipynb
+Notebook utilizzato per la pulizia del dataset `trips_pointv3.parquet`.
+Le operazioni svolte sono:
+- rimuovere le coordinate errate data l'area di interesse (latitude e/o longitude minori o uguali a zero)
+- sistemazione ID: la variabile *point_trip_id* si ripete spesso per corse differenti, in giorni differenti, viene pertanto prodotta una nuova variabile *unique_id* che riporta un identificativo univoco per ogni trip, data dalla concatenazione del precedente ID e dalla data della corsa.
+- utilizzare un alphashape per filtrare le coordinate al di fuori dell'area di interesse (fuori dall'area delineata dal comune per l'utilizzo dei monopattini elettrici)
+Il notebook produce `trips_pointv3_cleaned.parquet`, salvato in `data`.
+
 ## ExploreTrips.ipynb
 Analisi esplorativa dei dati contenuti in `trips_pointv3.parquet`; contiene:
 - calcolo della durata media di un viaggio 
