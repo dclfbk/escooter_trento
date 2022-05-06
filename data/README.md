@@ -94,3 +94,6 @@ Contiene i seguenti campi:
 - `point_latitude` e `point_longitude`: coordinate in cui si trovava il mezzo al momento riportato nel corrispettivo timestamp.
 - `point_sequence` (int): ordine dei punti visitati all'interno di una stessa corsa.
 - `point_reliability`: None values.
+
+# trips_pointv3_cleaned.parquet
+Contiene il risultato delle operazioni di cleaning effettuate sul dataset `trips_pointv3.parquet` attraverso il notebook `0_clean_data.ipynb`.
