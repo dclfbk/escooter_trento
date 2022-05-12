@@ -89,11 +89,34 @@ Dati dei percorsi:
 Contiene i seguenti campi:
 - `operator` (str): operatore che fornisce il servizio. Assume valori 'BIT' o 'VENTO'.
 - `point_operator_id` (str): 'Bit Mobility' o 'Tier'.
-- `point_trip_id` (str): identificativo della corsa (alcuni identificativi si ripetono a distanza di lunghi periodi di tempo)
+- `point_trip_id` (str): identificativo della corsa (alcuni identificativi si ripetono a distanza di tempo).
 - `point_timestamp` (datetime): indica giorno e orario in cui è stata rilevata l'attività.
 - `point_latitude` e `point_longitude`: coordinate in cui si trovava il mezzo al momento riportato nel corrispettivo timestamp.
 - `point_sequence` (int): ordine dei punti visitati all'interno di una stessa corsa.
 - `point_reliability`: None values.
 
 # trips_pointv3_cleaned.parquet
-Contiene il risultato delle operazioni di cleaning effettuate sul dataset `trips_pointv3.parquet` attraverso il notebook `0_clean_data.ipynb`.
+Contiene il risultato delle operazioni di cleaning effettuate sul dataset `trips_pointv3.parquet` attraverso il notebook `0_clean_data_trips_pointv3.ipynb`.
+
+# tripsv3.parquet
+Contiene i seguenti campi:
+- `operator`: indica l'operatore che fornisce il servizio (BIT o VENTO).            
+- `trip_operator_id`: identificativo dell'operatore: assume valori "Bit Mobility", "WIND" e "Tier", dove Wind e Tier rappresentano lo stesso operatore, in quanto Wind è stata acquisita da Tier che a sua volta è stata acquisita da Vento.      
+- `trip_vehicle_id`: identificativo univoco del mezzo (e-scooter); sono presenti 645 e-scooters.             
+- `trip_id`: identificativo della corsa; persiste la problematica della ripetizione degli ID dopo qualche tempo.    
+- `trip_start` e `trip_end`: Timestamp di inizio e fine della corsa.        
+- `trip_start_epoch` e `trip_end_epoch`: Decimal type; identificano tempo di inizio e fine della corsa (ridondante).              
+- `trip_origin_time` e `trip_destination_time`: datetime type; informazione ridondante circa il tempo di inizio e di fine corsa.
+- `trip_origin_latitude` e `trip_origin_longitude`: Decimal type rappresentante le coordinate del mezzo al momento della partenza.
+- `trip_destination_latitude` e `trip_destination_longitude`: Decimal type rappresentante le coordinate del mezzo al momento dell'arrivo.   
+- `trip_points_num`: Decimal type; numero di punti registrati durante la corsa.            
+- `trip_points_numall`: Decimal type; per lo più riporta la stessa informazione di "trip_points_num".   
+- `trip_length`: float riportante la distanza percorsa in metri.    
+- `trip_mode`: str; indica il tipo di mezzo utilizzato. Assume unicamente valore "scooter".             
+- `trip_accuracy`: float, assume valori 15., 1. e nan.
+- `trip_duration_break_excluded`: Decimal type.
+- `trip_user_id`: all None values.
+- `trip_properties`: all None values. 
+
+# trips_pointv3_cleaned.parquet
+Contiene il risultato delle operazioni di cleaning effettuate sul dataset `tripsv3.parquet` attraverso il notebook `0_clean_data_tripsv3.ipynb`.

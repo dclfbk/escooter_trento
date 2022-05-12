@@ -1,6 +1,6 @@
 # Elenco dei codice scritto
 
-## 0_clean_data.ipynb
+## 0_clean_data_trips_pointv3.ipynb
 Notebook utilizzato per la pulizia del dataset `trips_pointv3.parquet`.
 Le operazioni svolte sono:
 - rimuovere le coordinate errate data l'area di interesse (latitude e/o longitude minori o uguali a zero)
@@ -34,3 +34,6 @@ Estrae i percorsi dai monopattini (da verificare meglio) ed applica il map match
 
 ## dataviz_spostamenti_monopattini.ipynb 
 Ricalca quanto presente nell'articolo [Stop detection in GPS tracks — Movingpandas & KeplerGl](https://towardsdatascience.com/stop-detection-in-gps-tracks-movingpandas-keplergl-point-map-with-stops-duration-in-bird-664064b3ccbc) e produce l'animazione presente in `dataviz_spostamenti_2022.html`, dove è possibile visualizzare, in base al periodo, le corse avvenute nei primi mesi del 2022, distinte per operatore.
+
+## costs_trips.ipynb 
+Calcola i costi delle varie corse presenti in `trips_pointv3_cleaned.parquet` secondo le regole vigenti.
