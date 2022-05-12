@@ -37,3 +37,6 @@ Ricalca quanto presente nell'articolo [Stop detection in GPS tracks — Movingpa
 
 ## costs_trips.ipynb 
 Calcola i costi delle varie corse presenti in `trips_pointv3_cleaned.parquet` secondo le regole vigenti.
+
+## vehicles_usage.ipynb (to do)
+Analizza, attraverso l'utilizzo dell'identificativo unico del veicolo, l'utilizzo dei vari e-scooters.
