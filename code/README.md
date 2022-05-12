@@ -6,7 +6,16 @@ Le operazioni svolte sono:
 - rimuovere le coordinate errate data l'area di interesse (latitude e/o longitude minori o uguali a zero)
 - sistemazione ID: la variabile *point_trip_id* si ripete spesso per corse differenti, in giorni differenti, viene pertanto prodotta una nuova variabile *unique_id* che riporta un identificativo univoco per ogni trip, data dalla concatenazione del precedente ID e dalla data della corsa.
 - utilizzare un alphashape per filtrare le coordinate al di fuori dell'area di interesse (fuori dall'area delineata dal comune per l'utilizzo dei monopattini elettrici)
+- rimuovere le corse anomale: un numero minimo di tratte sembra durare per molte ore (a volte anche più di 20). Ciò è probabilmente il risultato di un errore nella registrazione o di una concatenazione di corse differenti, pertanto questi dati "errati" sono stati rimossi.
 Il notebook produce `trips_pointv3_cleaned.parquet`, salvato in `data`.
+
+## 0_clean_data_tripsv3.ipynb
+Notebook utilizzato per la pulizia del dataset `tripsv3.parquet`.
+- rimuovere le coordinate errate data l'area di interesse (latitude e/o longitude minori o uguali a zero)
+- sistemazione ID: la variabile *trip_id* si ripete spesso per corse differenti, viene pertanto prodotta una nuova variabile *unique_id* che riporta un identificativo univoco per ogni trip, seguendo la stessa procedura del notebook precendente.
+- utilizzare un alphashape per filtrare le coordinate al di fuori dell'area di interesse (fuori dall'area delineata dal comune per l'utilizzo dei monopattini elettrici).
+- rimuovere le corse anomale (e.g., corse che durano per molte ore).
+Il notebook produce `tripsv3_cleaned.parquet`, salvato in `data`.
 
 ## ExploreTrips.ipynb
 Analisi esplorativa dei dati contenuti in `trips_pointv3.parquet`; contiene:
