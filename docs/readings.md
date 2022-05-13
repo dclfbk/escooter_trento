@@ -71,4 +71,11 @@ Correlation between the number of trips with hour, day, temperature and weather 
 With regards to these analysis, several interesting policy solutions were proposed.
 
 
-## [Agent-based models for simulating e-scooter sharing services: A review and a qualitative assessment](https://www.sciencedirect.com/science/article/pii/S2046043022000016)
+## [Investigating usage patterns of shared electric scooters in Stockholm](http://kth.diva-portal.org/smash/get/diva2:1609454/FULLTEXT01.pdf)
+
+The paper presents an interesting analysis of e-scooters usage in Stockholm, with the purpose of understanding users' behaviour in order to achieve a better urban planning. The main goals are to understand why a trip was conducted, by doing a "category analysis", taking advantage of OSM to fetch POI, to present findings of the exploratory analysis, and to try to implement a random forest model able to predict the e-scooters activity level of any taken zone in the city.
+Thus, the main questions concern the possibility to find spatial and temporal patterns in the trip purposes from the category analysis, and whether a machine learning model could learn these patterns.
+The main data used are, besides the ones fetched from OSM, coming from an e-scooter company, providing coordinates of origin and destination of the trip, with respective timestamps. 
+In order to assign each trip to a possible reason for which it was conducted, each endpoint was linked to the POI(s) nearby. This was done through a divide and conquer approach, and two methods for considering the most appropriate reason of each trip were considered: the "choose-closest" and "choose-everything" approach, possibly using a scoring function in order to weight POIs based on their distance from the endpoint.
+Several barplots and heatmaps were produced, showing relations between levels of activity of e-scooters with time, location, and activity categories. Some considerations concerning the public transport activity were made, analyzing whether this influences the level of usage of e-scooters (e.g., for the lack of public transport) and at which time (considering both 2 hours time-windows - thus 12 segments in total - and overall).
+Finally, a random forest model was produced, however the lack of further features and imprecisions in the coordinates lead to weak results.
