@@ -49,3 +49,7 @@ Calcola i costi delle varie corse presenti in `trips_pointv3_cleaned.parquet` se
 
 ## vehicles_usage.ipynb (to do)
 Analizza, attraverso l'utilizzo dell'identificativo unico del veicolo, l'utilizzo dei vari e-scooters.
+
+## MapMatching_ValhallaDocker.ipynb
+Effettua il map matching delle corse utilizzando il Docker di Valhalla. Produce `mapmatching-example.html`(un esempio di una trip dopo il map matching) e `map-matching.html` (tutte le trips per cui è stato fatto il map matching, in una data giornata).
+Inoltre, salva identificativi e routes risultanti dal map-matching in un nuovo dataframe (`map_matched_routes.parquet`).
