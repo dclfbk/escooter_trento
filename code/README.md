@@ -53,3 +53,9 @@ Analizza, attraverso l'identificativo unico del veicolo, l'utilizzo dei vari e-s
 ## MapMatching_ValhallaDocker.ipynb
 Effettua il map matching delle corse utilizzando il Docker di Valhalla. Produce `mapmatching-example.html`(un esempio di una trip dopo il map matching) e `map-matching.html` (tutte le trips per cui è stato fatto il map matching, in una data giornata).
 Inoltre, salva identificativi e routes risultanti dal map-matching in un nuovo dataframe (`map_matched_routes.parquet`).
+
+## ztl-p.ipynb
+Controlla se i monopattini passano attraverso le zone ZTL-P e quelle a circolazione interdetta, utilizzando prima i dati originali e poi quelli risultanti dal map-matching. Ci si aspetta di trovare pochi percorsi passanti attraverso queste aree vietate al transito dei monopattini, tuttavia i risultati appaiono differenti da quelli attesi.
+
+## tratte_forti.ipynb
+Produce alcune visualizzazioni per osservare le tratte più percorse in base all'arco di tempo selezionato.
