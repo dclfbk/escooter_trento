@@ -57,5 +57,6 @@ Inoltre, salva identificativi e routes risultanti dal map-matching in un nuovo d
 ## ztl-p.ipynb
 Controlla se i monopattini passano attraverso le zone ZTL-P e quelle a circolazione interdetta, utilizzando prima i dati originali e poi quelli risultanti dal map-matching. Ci si aspetta di trovare pochi percorsi passanti attraverso queste aree vietate al transito dei monopattini, tuttavia i risultati appaiono differenti da quelli attesi.
 
-## tratte_forti.ipynb
-Produce alcune visualizzazioni per osservare le tratte più percorse in base all'arco di tempo selezionato.
+## tratte_forti.ipynb & interactive_tratte_forti.ipynb
+Producono alcune visualizzazioni per osservare le tratte più percorse in base all'arco di tempo selezionato.
+Il secondo notebook rende interattiva una delle mappe permettendo di selezionare mese e anno da visualizzare.
