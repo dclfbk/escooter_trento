@@ -59,4 +59,4 @@ Controlla se i monopattini passano attraverso le zone ZTL-P e quelle a circolazi
 
 ## tratte_forti.ipynb & interactive_tratte_forti.ipynb
 Producono alcune visualizzazioni per osservare le tratte più percorse in base all'arco di tempo selezionato.
-Il secondo notebook rende interattiva una delle mappe permettendo di selezionare mese e anno da visualizzare.
+Il secondo notebook rende interattiva una delle mappe permettendo di selezionare il mese oppure la fascia oraria da visualizzare.
