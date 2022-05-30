@@ -60,3 +60,6 @@ Controlla se i monopattini passano attraverso le zone ZTL-P e quelle a circolazi
 ## tratte_forti.ipynb & interactive_tratte_forti.ipynb
 Producono alcune visualizzazioni per osservare le tratte più percorse in base all'arco di tempo selezionato.
 Il secondo notebook rende interattiva una delle mappe permettendo di selezionare il mese oppure la fascia oraria da visualizzare.
+
+## cfr_autobus.ipynb
+Compara inzio e fine corsa dei viaggi in e-scooter con le fermate del trasporto pubblico per verificare se esiste un autobus che, in quella fascia oraria e periodo dell'anno, avrebbe potuto fungere da mezzo di trasporto alternativo. Per far ciò utilizza i files seguenti lo standard GTFS forniti dalla Provincia (`data/google_transit_urbano_tte.zip`).
