@@ -42,13 +42,13 @@ Utilizza inoltre varie funzioni di generalizzazione, tra cui l'algoritmo Douglas
 Estrae i percorsi dai monopattini (da verificare meglio) ed applica il map matching.
 
 ## dataviz_spostamenti_monopattini.ipynb 
-Ricalca quanto presente nell'articolo [Stop detection in GPS tracks — Movingpandas & KeplerGl](https://towardsdatascience.com/stop-detection-in-gps-tracks-movingpandas-keplergl-point-map-with-stops-duration-in-bird-664064b3ccbc) e produce l'animazione presente in `dataviz_spostamenti_2022.html`, dove è possibile visualizzare, in base al periodo, le corse avvenute nei primi mesi del 2022, distinte per operatore.
+Partendo da quanto presente nell'articolo [Stop detection in GPS tracks — Movingpandas & KeplerGl](https://towardsdatascience.com/stop-detection-in-gps-tracks-movingpandas-keplergl-point-map-with-stops-duration-in-bird-664064b3ccbc), produce l'animazione presente in `dataviz_spostamenti_2022.html`, dove è possibile visualizzare, in base al periodo, le corse avvenute nei primi mesi del 2022, distinte per operatore e con la presenza dei vari punti di "stop". Le traiettorie sono invece visualizzate in `dataviz_traiettorie_2022.html` con spessore e colore differente in base alla velocità, calcolata mediante MovingPandas.
 
 ## costs_trips.ipynb 
 Calcola i costi delle varie corse presenti in `trips_pointv3_cleaned.parquet` secondo le regole vigenti.
 
 ## vehicles_usage.ipynb (to do)
-Analizza, attraverso l'identificativo unico del veicolo, l'utilizzo dei vari e-scooters.
+Analizza, attraverso l'identificativo unico del veicolo, l'utilizzo dei vari e-scooters. In particolare, elabora periodi e tempi di utilizzo e visualizza i periodi di lunga inattività di alcuni e-scooters attraverso l'utilizzo dello space time cube.
 
 ## MapMatching_ValhallaDocker.ipynb
 Effettua il map matching delle corse utilizzando il Docker di Valhalla. Produce `mapmatching-example.html`(un esempio di una trip dopo il map matching) e `map-matching.html` (tutte le trips per cui è stato fatto il map matching, in una data giornata).
