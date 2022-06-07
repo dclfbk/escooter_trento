@@ -71,6 +71,12 @@ Correlation between the number of trips with hour, day, temperature and weather 
 With regards to these analysis, several interesting policy solutions were proposed.
 
 
+## [Electric Scooters’Trip Data Collection and Analysis](https://www.ri.se/sites/default/files/2021-02/EVS33-Electric_Scooters_trip_Data_Collection_and_Analysis_FinalSubmitted.pdf)
+
+The exploratory analysis considers e-scooters data from four different European cities: Berlin, Paris, Madrid, and Stockholm. The data under study concern the start and end points of the trips, while no information about the routes, the users, the reasons of the trips, and what alternative modes would have been used in absence of e-scooters is available. 
+Berlin proved to be the city with the maximum utilization rate, while Madrid seems to be the one where they are used the least. As expected, there is a declining trend in usage toward winter, especially in Stockholm and Berlin, and the average e-scooter trip is fairly short, around 10-15 minutes, with Paris recoding the longest trips. E-scooters are mainly used in the afternoon, with a significant evening peak across all cities, and mostly on Fridays and Saturdays. Stockholm presents a peculiar morning peak, which may suggest that e-scooters are used as part of the commute there. Further analysis to study the reason of differences among cities, as long with users, routes, modes alternatives, and trips’ reasons are needed.
+
+
 ## [Investigating usage patterns of shared electric scooters in Stockholm](http://kth.diva-portal.org/smash/get/diva2:1609454/FULLTEXT01.pdf)
 
 The paper presents an interesting analysis of e-scooters usage in Stockholm, with the purpose of understanding users' behaviour in order to achieve a better urban planning. The main goals are to understand why a trip was conducted, by doing a "category analysis", taking advantage of OSM to fetch POI, to present findings of the exploratory analysis, and to try to implement a random forest model able to predict the e-scooters activity level of any taken zone in the city.
