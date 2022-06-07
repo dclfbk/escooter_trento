@@ -57,9 +57,11 @@ Inoltre, salva identificativi e routes risultanti dal map-matching in un nuovo d
 ## ztl-p.ipynb
 Controlla se i monopattini passano attraverso le zone ZTL-P e quelle a circolazione interdetta, utilizzando prima i dati originali e poi quelli risultanti dal map-matching. Ci si aspetta di trovare pochi percorsi passanti attraverso queste aree vietate al transito dei monopattini, tuttavia i risultati appaiono differenti da quelli attesi.
 
-## tratte_forti.ipynb & interactive_tratte_forti.ipynb
-Producono alcune visualizzazioni per osservare le tratte più percorse in base all'arco di tempo selezionato.
-Il secondo notebook rende interattiva una delle mappe permettendo di selezionare il mese oppure la fascia oraria da visualizzare.
+## tratte_forti.ipynb 
+Produce alcune visualizzazioni, utilizzando colormaps e heatmaps, per osservare le tratte più percorse in base all'arco di tempo selezionato.
+
+## interactive_tratte_forti.ipynb
+Rende interattive le visualizzazioni del notebook precendente permettendo di selezionare il mese oppure la fascia oraria da visualizzare servendosi dell'interfaccia offerta da Panel. La visualizzazione per fascia oraria è più comodamente visibile eseguendo `tratte_forti_by_hour.py`.
 
 ## cfr_autobus.ipynb
 Compara inzio e fine corsa dei viaggi in e-scooter con le fermate del trasporto pubblico per verificare se esiste un autobus che, in quella fascia oraria e periodo dell'anno, avrebbe potuto fungere da mezzo di trasporto alternativo. Per far ciò utilizza i files seguenti lo standard GTFS forniti dalla Provincia (`data/google_transit_urbano_tte.zip`).
