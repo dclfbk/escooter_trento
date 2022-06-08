@@ -17,15 +17,8 @@ Notebook utilizzato per la pulizia del dataset `tripsv3.parquet`.
 - rimuovere le corse anomale (e.g., corse che durano per molte ore).
 Il notebook produce `tripsv3_cleaned.parquet`, salvato in `data`.
 
-## ExploreTrips.ipynb
-Analisi esplorativa dei dati contenuti in `trips_pointv3.parquet`; contiene:
-- calcolo della durata media di un viaggio 
-- plot del numero di viaggi per giorno
-- plot del numero di viaggi per giorno della settimana
-- plot dei viaggi per ora del giorno 
-- plot dei viaggi per ora per ogni operatore 
-- plot dell'uso mensile
-- plot del tempo cumulativo dell'uso di e-scooter al giorno
+## ExploreTrips.ipynb & datashader_data_exploration.ipynb
+Il primo notebook effettua un'analisi esplorativa dei dati contenuti in `trips_pointv3_cleaned.parquet`, mentre il secondo ripete lo stesso procedimento su `tripsv3_cleaned.parquet`. I datasets differiscono nel modo di raccogliere i dati: il primo dataset registra i datapoints intermedi dei viaggi, mentre nel secondo ogni record rappresenta una singola trip, pertanto le considerazioni risultanti dalle due analisi differiscono. Inoltre, il secondo notebook, presenta visualizzazioni interattive per esplorare punti di focus di origine e destinazione dei viaggi.
 
 ## traiettorie.ipynb
 Visualizzazione delle traiettorie in `trips_pointv3.parquet` e inizio a comparare punti di fermata; contiene:
