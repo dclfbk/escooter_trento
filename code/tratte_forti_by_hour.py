@@ -105,19 +105,30 @@ class PanelFoliumMap(param.Parameterized):
         self.folium_pane.object = self.map
 
 
+# __main__ makes panel not servable through anaconda prompt "panel serve tratte_forti_by_hour.py" on windows
+# as found in GitHub issue: https://github.com/holoviz/panel/issues/206
+# However, using __main__, the panel is shown if the script is ran
 
-def main():
-    ACCENT_COLOR = "#DAA520"
-    template = pn.template.FastListTemplate(
+# def main():
+#     ACCENT_COLOR = "#DAA520"
+#     template = pn.template.FastListTemplate(
+#         site="Map", 
+#         title="Most Travelled Route by Hour(s)", 
+#         accent_base_color=ACCENT_COLOR, header_background=ACCENT_COLOR, theme='default', theme_toggle=False,
+#         main=["Select the desired time range by slicing to the extreme hours of the interval of your choice", 
+#         PanelFoliumMap().view]).show()
+#     return template
+
+
+# if __name__ == "__main__":
+#     main()
+
+ACCENT_COLOR = "#DAA520"
+template = pn.template.FastListTemplate(
         site="Map", 
         title="Most Travelled Route by Hour(s)", 
         accent_base_color=ACCENT_COLOR, header_background=ACCENT_COLOR, theme='default', theme_toggle=False,
         main=["Select the desired time range by slicing to the extreme hours of the interval of your choice", 
-        PanelFoliumMap().view]).show()
-    return template
-
-
-if __name__ == "__main__":
-    main()
+        PanelFoliumMap().view]).servable();
     
 
