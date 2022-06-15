@@ -58,3 +58,9 @@ Rende interattive le visualizzazioni del notebook precendente permettendo di sel
 
 ## cfr_autobus.ipynb
 Compara inzio e fine corsa dei viaggi in e-scooter con le fermate del trasporto pubblico per verificare se esiste un autobus che, in quella fascia oraria e periodo dell'anno, avrebbe potuto fungere da mezzo di trasporto alternativo. Per far ciò utilizza i files seguenti lo standard GTFS forniti dalla Provincia (`data/google_transit_urbano_tte.zip`).
+
+## decode_func_mm.py
+La procedura di map-matching di Valhalla Docker restituisce i percorsi in una encoded polyline: questa funzione è stata utilizzata per decodificare il risultato del map-matching e ottenere una lista di liste, ognuna delle quali rappresenta un punto nel percorso (secondo l'ordine longitudine-latitudine).
+
+## trends_dashboard.ipynb
+Breve notebook che fornisce una visualizzazione interattiva delle trips, permettendo di selezionare trends a seconda della durata (in minuti), della distanza percorsa (in metri) e del numero di viaggi, differenziando gli andamenti per operatore fornente il servizio. La dashboard può essere visualizzata tramite il comando `panel serve trends_dashboard.ipynb`.
