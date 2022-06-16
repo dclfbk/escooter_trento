@@ -58,6 +58,7 @@ Rende interattive le visualizzazioni del notebook precendente permettendo di sel
 
 ## cfr_autobus.ipynb
 Compara inzio e fine corsa dei viaggi in e-scooter con le fermate del trasporto pubblico per verificare se esiste un autobus che, in quella fascia oraria e periodo dell'anno, avrebbe potuto fungere da mezzo di trasporto alternativo. Per far ciò utilizza i files seguenti lo standard GTFS forniti dalla Provincia (`data/google_transit_urbano_tte.zip`).
+Nella seconda parte del notebook, verifica la possibilità di introdurre nuove linee o fermate degli autobus, basandosi sui percorsi e le fermate più frequenti dei viaggi in e-scooter. Per far ciò si serve di algoritmi di clustering quali DBSCAN e compara i risultati con le tratte degli autobus a seguito del map-matching e con le rispettive fermate.
 
 ## decode_func_mm.py
 La procedura di map-matching di Valhalla Docker restituisce i percorsi in una encoded polyline: questa funzione è stata utilizzata per decodificare il risultato del map-matching e ottenere una lista di liste, ognuna delle quali rappresenta un punto nel percorso (secondo l'ordine longitudine-latitudine).
