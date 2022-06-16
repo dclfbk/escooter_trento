@@ -120,3 +120,26 @@ Contiene i seguenti campi:
 
 # trips_pointv3_cleaned.parquet
 Contiene il risultato delle operazioni di cleaning effettuate sul dataset `tripsv3.parquet` attraverso il notebook `0_clean_data_tripsv3.ipynb`.
+
+
+# Additional data
+
+# google_transit_urbano.zip
+Contiene i files relativi al trasporto pubblico della provincia di Trento in formato GTFS, ricavati dal sito di [TrentinoTrasporti](https://www.trentinotrasporti.it/open-data).
+
+# all_bus_alternatives.parquet
+File risultante dall'analisi di possibili alternative ai viaggi in e-scooter, effettuate all'interno del notebook `cfr_autobus.ipynb`.
+Riporta:
+- `escooter_id`: identificativo univoco della corsa in e-scooter 
+- `bus_trip_id`: identificativo del possibile trasporto alternativo
+- `bus_stops`: coordinate dei punti appartenenti al percorso svolto dal mezzo di trasporto alternativo
+
+# map_matched_routes.parquet
+Risultato del map-matching delle tratte in e-scooter effettuato con Valhalla Docker all'interno di `MapMatching_ValhallaDocker.ipynb`.
+Contiene:
+- `unique_id`: identificativo univoco della corsa in e-scooter
+- `route`: coordinate, a seguito del map-matching, del percorso svolto in e-scooter 
+- `matched`: variabile buleana, True se il map-matching ha avuto successo, altrimenti False. In caso assuma valore False, le coordinate riportate in `route` sono quelle originarie, precendenti al map-matching.
+
+# ways_id.json
+File json prodotto in `interactive_tratte_forti.ipynb` per effettuare il match tra l'identificativo del segmento stradale restituito da Valhalla Docker e le coordinate che lo caratterizzano. Associato ad ogni identificato, presenta una lista di coordinate e il conteggio delle volte in cui quella strada è stata percorsa, secondo le osservazioni effettuate sui monopattini elettrici nel periodo di raccolta dati. 
