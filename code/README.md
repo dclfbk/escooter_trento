@@ -53,7 +53,7 @@ Controlla se i monopattini passano attraverso le zone ZTL-P e quelle a circolazi
 ## tratte_forti.ipynb 
 Produce alcune visualizzazioni, utilizzando colormaps e heatmaps, per osservare le tratte più percorse in base all'arco di tempo selezionato.
 
-## interactive_tratte_forti.ipynb
+## interactive_tratte_forti.ipynb (tratte_forti_by_hour.py)
 Rende interattive le visualizzazioni del notebook precendente permettendo di selezionare il mese oppure la fascia oraria da visualizzare servendosi dell'interfaccia offerta da Panel. La visualizzazione per fascia oraria è più comodamente visibile eseguendo `tratte_forti_by_hour.py`.
 
 ## cfr_autobus.ipynb
@@ -68,3 +68,6 @@ Breve notebook che fornisce una visualizzazione interattiva delle trips, permett
 
 ## analisi_temporale.ipynb
 Visualiiza i trend relativi alle corse in e-scooter considerando diversi periodi e suddivisioni temporali e in relazione a eventi dall'impatto ipoteticamente rilevante, quali il mutamento delle regole di utlizzo e l'introduzione di provvedimenti a livello nazionale per fronteggiare l'emergenza sanitaria.
+
+## produce_dataset_speed_by_wayID.py & tratte_by_speed.py
+Producono rispettivamente il dataset e la visualizzazione delle tratte per velocità di percorrenza. Il secondo script produce una dashboard che permette di selezionare le fasce orarie da visualizzare per confrontare le velocità medie con cui le varie strade vengono percorse a seconda dalle fasce orarie.
