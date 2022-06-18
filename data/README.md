@@ -143,3 +143,26 @@ Contiene:
 
 # ways_id.json
 File json prodotto in `interactive_tratte_forti.ipynb` per effettuare il match tra l'identificativo del segmento stradale restituito da Valhalla Docker e le coordinate che lo caratterizzano. Associato ad ogni identificato, presenta una lista di coordinate e il conteggio delle volte in cui quella strada è stata percorsa, secondo le osservazioni effettuate sui monopattini elettrici nel periodo di raccolta dati. 
+
+# map_matched_edges_ids.parquet
+Prodotto all'interno di `interactive_tratte_forti.ipynb`. Contiene: `unique_id`, `route`, `matched` (boolean), `dates` (dt.date), `month` (int), `year` (int), `edge_ids` (lista dei segmenti stradali attraversati; ognuno appare un'unica volta, anche quando viene attraversato molteplici volte).
+
+# mm_wayID_speed_name.parquet
+Dataset con dati delle route successivi al map-matching, sottoposti nuovamente a Valhalla Docker per ottenere gli identificativi dei segmenti stradali e le velocità per corsa per segmento, oltre che ai nomi delle strade o piazze corrispondenti al segmento. Oltre alle velocità ricavate dalla request a Valhalla, è stato utilizzato pyproj.Geod per trovare la distanza percorsa, e successivamente da questa calcolare la velocità complessiva dell'intera corsa.
+Le coordinate relative ai segmenti potranno poi essere ricavate consultando ways_id.json.
+Podotto da *produce_dataset_speed_by_vayID.py*. 
+Le variabili contenute nel dataset sono:
+- `unique_id`: identificativo univoco della corsa in e-scooter
+- `route`: coordinate, a seguito del map-matching, del percorso svolto in e-scooter (lista di liste)
+- `matched`: variabile buleana, True se il map-matching ha avuto successo, altrimenti False. In caso assuma valore False, le coordinate riportate in `route` sono quelle originarie, precendenti al map-matching.
+- `dates`: data (annp-mese-giorno), formato dt.date
+- `month`: mese (integer)
+- `year`: anno (integer)
+- `edges_id`: lista contenente gli identificativi dei segmenti stradali ricavati da Valhalla
+- `start_time`: timestamp di inizio corsa
+- `end_time`: timestamp di fine corsa
+- `distance`: distanza percorsa, calcolata con pyproj.Geod sui dati successivi al map-matching, per maggior precisione
+- `speed`: velocità complessiva della corsa (in m/s)
+- `speeds_for_edge`: lista contenente le velocità per ogni segmento stradale nella corsa, ricavata da Valhalla, espressa in km/h
+- `street_names`: nomi delle strade o aree attraversate durante la corsa in e-scooter, ricavate da Valhalla. ID del segmento stradale, velocità per segmento e nome della strada presenti allo stesso indice nelle rispettive liste (dato un unique_id) sono da considerarsi informazioni corrispondenti.
+- `start_hour`: ora di inizio corsa (integer)
