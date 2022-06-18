@@ -58,7 +58,7 @@ def render_map(map, routes, avg_speed):
     colormap = cm.LinearColormap(colors=['gray', 'lightblue', 'blue', 'darkblue'], 
                                 index = np.linspace(min(avg_speed), max(avg_speed), num=4),
                                 vmin = min(avg_speed), vmax = max(avg_speed), 
-                                caption='Speed at which ways have been passed through on average')
+                                caption='Speed at which ways have been passed through on average (in m/s)')
     
     fg = folium.FeatureGroup(name='speed_tratte_forti')    
 
@@ -98,26 +98,28 @@ class PanelFoliumMap(param.Parameterized):
 
 ########################################
 
-# ACCENT_COLOR = "#0047AB"
-# template = pn.template.FastListTemplate(
-#         site="Map", 
-#         title="Route by Average Speed for selected Hour(s)", 
-#         accent_base_color=ACCENT_COLOR, header_background=ACCENT_COLOR, theme='default', theme_toggle=False,
-#         main=["Select the desired time range by slicing to the extremes of the time interval", 
-#         PanelFoliumMap().view]).servable();
+# panel serve tratte_by_speed.py
 
-
-
-def main():
-    ACCENT_COLOR = "#0047AB"
-    template = pn.template.FastListTemplate(
+ACCENT_COLOR = "#0047AB"
+template = pn.template.FastListTemplate(
         site="Map", 
         title="Route by Average Speed for selected Hour(s)", 
         accent_base_color=ACCENT_COLOR, header_background=ACCENT_COLOR, theme='default', theme_toggle=False,
         main=["Select the desired time range by slicing to the extremes of the time interval", 
-        PanelFoliumMap().view]).show();
-    return template
+        PanelFoliumMap().view]).servable();
 
 
-if __name__ == "__main__":
-    main()
+
+# def main():
+#     ACCENT_COLOR = "#0047AB"
+#     template = pn.template.FastListTemplate(
+#         site="Map", 
+#         title="Route by Average Speed for selected Hour(s)", 
+#         accent_base_color=ACCENT_COLOR, header_background=ACCENT_COLOR, theme='default', theme_toggle=False,
+#         main=["Select the desired time range by slicing to the extremes of the time interval", 
+#         PanelFoliumMap().view]).show();
+#     return template
+
+
+# if __name__ == "__main__":
+#     main()
