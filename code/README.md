@@ -48,13 +48,14 @@ Effettua il map matching delle corse utilizzando il Docker di Valhalla. Produce 
 Inoltre, salva identificativi e routes risultanti dal map-matching in un nuovo dataframe (`map_matched_routes.parquet`).
 
 ## ztl-p.ipynb
-Controlla se i monopattini passano attraverso le zone ZTL-P e quelle a circolazione interdetta, utilizzando prima i dati originali e poi quelli risultanti dal map-matching. Ci si aspetta di trovare pochi percorsi passanti attraverso queste aree vietate al transito dei monopattini, tuttavia i risultati appaiono differenti da quelli attesi.
+Controlla se i monopattini passano attraverso le zone ZTL-P e quelle a circolazione interdetta, utilizzando prima i dati originali e poi quelli risultanti dal map-matching. Ci si aspetta di trovare pochi percorsi passanti attraverso le aree vietate al transito dei monopattini, tuttavia i risultati appaiono differenti da quelli attesi. Quindi si procede ad un'ulteriore differenziazione, verificando se le corse passanti attraverso le zone interdette sostino o transitino nelle suddette aree.
+Per quanto riguarda le zone ZTL-P, dove la velocità deve essere ridotta a un massimo di 6 km/h, si constata che tale limite viene rispettato, e solo raramente si raggiungono velocità sopra la media, rimanendo comunque all'interno del limite consentito.
 
 ## tratte_forti.ipynb 
 Produce alcune visualizzazioni, utilizzando colormaps e heatmaps, per osservare le tratte più percorse in base all'arco di tempo selezionato.
 
 ## interactive_tratte_forti.ipynb (tratte_forti_by_hour.py)
-Rende interattive le visualizzazioni del notebook precendente permettendo di selezionare il mese oppure la fascia oraria da visualizzare servendosi dell'interfaccia offerta da Panel. La visualizzazione per fascia oraria è più comodamente visibile eseguendo `tratte_forti_by_hour.py`.
+Rende interattive le visualizzazioni del notebook precendente permettendo di selezionare il mese oppure la fascia oraria da visualizzare servendosi dell'interfaccia offerta da Panel. La visualizzazione per fascia oraria è più comodamente visibile eseguendo `tratte_forti_by_hour.py`, attraverso il comando `panel serve tratte_forti_by_hour.py`.
 
 ## cfr_autobus.ipynb
 Compara inzio e fine corsa dei viaggi in e-scooter con le fermate del trasporto pubblico per verificare se esiste un autobus che, in quella fascia oraria e periodo dell'anno, avrebbe potuto fungere da mezzo di trasporto alternativo. Per far ciò utilizza i files seguenti lo standard GTFS forniti dalla Provincia (`data/google_transit_urbano_tte.zip`).
@@ -70,4 +71,4 @@ Breve notebook che fornisce una visualizzazione interattiva delle trips, permett
 Visualiiza i trend relativi alle corse in e-scooter considerando diversi periodi e suddivisioni temporali e in relazione a eventi dall'impatto ipoteticamente rilevante, quali il mutamento delle regole di utlizzo e l'introduzione di provvedimenti a livello nazionale per fronteggiare l'emergenza sanitaria.
 
 ## produce_dataset_speed_by_wayID.py & tratte_by_speed.py
-Producono rispettivamente il dataset e la visualizzazione delle tratte per velocità di percorrenza. Il secondo script produce una dashboard che permette di selezionare le fasce orarie da visualizzare per confrontare le velocità medie con cui le varie strade vengono percorse a seconda dalle fasce orarie.
+Producono rispettivamente il dataset e la visualizzazione delle tratte per velocità di percorrenza. Il secondo script produce una dashboard che permette di selezionare le fasce orarie da visualizzare per confrontare le velocità medie con cui le varie strade vengono percorse a seconda dalle fasce orarie. La dashboard può essere comodamente consultata eseguendo `panel serve tratte_py_speed.py`.
