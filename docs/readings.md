@@ -87,6 +87,12 @@ Several barplots and heatmaps were produced, showing relations between levels of
 Finally, a random forest model was produced, however the lack of further features and imprecisions in the coordinates lead to weak results.
 
 
+## [Shared E-scooters: Business, Pleasure, or Transit?](https://deepai.org/publication/shared-e-scooters-business-pleasure-or-transit)
+
+This study aims to infer e-scooter trips purposes, by associating to each trip origin and destination a POI. Then, it clusters trips into 10 collections of POIs, each collection containing POIs related to the same category of purposes. To do so, advantage of Google Places API was taken, using Nearby Search and Text Search functionalities. Several techniques for data collection, cleansing, analysis, and clustering are applied, leading to some interesting findings. In summary, e-scooters seem to complement existing modes, at a convenient price for specific segments of the population. Thanks to the found trip purposes, it is also possible to indirectly infer who are the kind of people using the service. Important is also to consider the temporal dimension, as different purposes are predominant in different times of the day and during weekdays/weekends. 
+Among the 10 collections of POIs, the ones having the highest number of observations have been further analyzed to understand internal differentiation, leading again to several inferences on people behavior and habits.
+
+
 # Forecasting
 
 ## [Demand forecasting of micro mobility using a gated recurrent unit](https://www.sbt-durabi.org/articles/xml/0KVE/#idm413822888x)
