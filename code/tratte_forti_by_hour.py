@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 
 
 def build_df():
-    df = pd.read_parquet('C:/Users/luisa/Desktop/escooter_trento/produced_datasets/map_matched_edges_ids.parquet')
+    df = pd.read_parquet('C:/Users/luisa/Desktop/escooter_trento/data/map_matched_edges_ids.parquet')
     df = df.reset_index(drop=True)
     orig_df= pd.read_parquet('C:/Users/luisa/Desktop/escooter_trento/data/trips_pointv3_cleaned.parquet')
     new_df = orig_df.groupby('unique_id', as_index=False).aggregate({"point_timestamp":lambda x: x.to_list()})
@@ -28,7 +28,7 @@ def build_df():
         tmstmp.append(start_time[df.at[row, 'unique_id']])
     df['start_time'] = tmstmp
 
-    f = open('C:/Users/luisa/Desktop/escooter_trento/produced_datasets/ways_id.json')
+    f = open('C:/Users/luisa/Desktop/escooter_trento/data/ways_id.json')
     d = json.load(f)
     return df, d
 
@@ -48,19 +48,21 @@ def compute_route_freq(df, d, start_h, end_h):
     
     routes = []
     cnt = []
+    names = []
     for road in list_ways:
         route = d[str(road)]['coords'] # coordinates (from way_id.json)
         routes.append(route)
         cnt.append(count_freq[road]) # num. times passed through (for the given timewindow -> from counter above)
-        
-    return routes, cnt
+        names.append(d[str(road)]['name']) # street names
+
+    return routes, cnt, names
 
 
 def get_map():
     return folium.Map(location=[46.066667,11.133333], tiles='Stamen Toner', zoom_start=14) 
 
 
-def render_map(map, routes, cnt):
+def render_map(map, routes, cnt, names):
     '''
     render the map 
     '''
@@ -75,7 +77,7 @@ def render_map(map, routes, cnt):
     for way in range(len(routes)): 
         color = colormap(cnt[way])
         w = min(cnt[way]/10, 5)
-        folium.vector_layers.PolyLine(routes[way], color=color, weight=w).add_to(fg)
+        folium.vector_layers.PolyLine(routes[way], tooltip=names[way], color=color, weight=w).add_to(fg)
 
     map.add_child(fg)
     map.add_child(colormap)
@@ -100,8 +102,8 @@ class PanelFoliumMap(param.Parameterized):
     def _update_map(self):
         self.map = get_map()
         self.df, self.d = build_df()
-        routes, cnt = compute_route_freq(self.df, self.d, start_h=self.start_hour, end_h=self.end_hour)
-        render_map(self.map, routes, cnt)
+        routes, cnt, names = compute_route_freq(self.df, self.d, start_h=self.start_hour, end_h=self.end_hour)
+        render_map(self.map, routes, cnt, names)
         self.folium_pane.object = self.map
 
 

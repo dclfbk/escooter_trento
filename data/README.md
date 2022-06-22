@@ -142,7 +142,7 @@ Contiene:
 - `matched`: variabile buleana, True se il map-matching ha avuto successo, altrimenti False. In caso assuma valore False, le coordinate riportate in `route` sono quelle originarie, precendenti al map-matching.
 
 # ways_id.json
-File json prodotto in `interactive_tratte_forti.ipynb` per effettuare il match tra l'identificativo del segmento stradale restituito da Valhalla Docker e le coordinate che lo caratterizzano. Associato ad ogni identificato, presenta una lista di coordinate e il conteggio delle volte in cui quella strada è stata percorsa, secondo le osservazioni effettuate sui monopattini elettrici nel periodo di raccolta dati. 
+File json prodotto in `interactive_tratte_forti.ipynb` per effettuare il match tra l'identificativo del segmento stradale restituito da Valhalla Docker e le coordinate che lo caratterizzano. Associato ad ogni identificato, presenta una lista di coordinate e il conteggio delle volte in cui quella strada è stata percorsa, secondo le osservazioni effettuate sui monopattini elettrici nel periodo di raccolta dati. UPDATED: per ogni identificativo è stata aggiunto ai valori associati il nome della strada che rappresenta.
 
 # map_matched_edges_ids.parquet
 Prodotto all'interno di `interactive_tratte_forti.ipynb`. Contiene: `unique_id`, `route`, `matched` (boolean), `dates` (dt.date), `month` (int), `year` (int), `edge_ids` (lista dei segmenti stradali attraversati; ognuno appare un'unica volta, anche quando viene attraversato molteplici volte).

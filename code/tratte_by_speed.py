@@ -13,7 +13,7 @@ def get_df():
     df = pd.read_parquet('C:/Users/luisa/Desktop/escooter_trento/data/mm_wayID_speed_name.parquet')
     df = df.reset_index(drop=True)
 
-    f = open('C:/Users/luisa/Desktop/escooter_trento/produced_datasets/ways_id.json')
+    f = open('C:/Users/luisa/Desktop/escooter_trento/data/ways_id.json')
     d = json.load(f)
     return df, d
 
@@ -41,21 +41,23 @@ def compute_route_speed(df, d, start_h, end_h):
     # get coordinates for every street segment from ways_id.json 
     routes = []
     avg_speed = []
+    names = []
     for id in way_speed.keys():
         routes.append(d[str(id)]['coords'])
         avg_speed.append(way_speed[id])
+        names.append(d[str(id)]['name'])
 
-    return routes, avg_speed
+    return routes, avg_speed, names
 
 def get_map():
     return folium.Map(location=[46.066667,11.133333], tiles='Stamen Toner', zoom_start=14) 
 
-def render_map(map, routes, avg_speed):
+def render_map(map, routes, avg_speed, names):
     '''
     render the map 
     '''
     
-    colormap = cm.LinearColormap(colors=['gray', 'lightblue', 'blue', 'darkblue'], 
+    colormap = cm.LinearColormap(colors=['gray', '#E7E56F', '#80C348', '#348538'],  # FFF79C
                                 index = np.linspace(min(avg_speed), max(avg_speed), num=4),
                                 vmin = min(avg_speed), vmax = max(avg_speed), 
                                 caption='Speed at which ways have been passed through on average (in m/s)')
@@ -65,7 +67,8 @@ def render_map(map, routes, avg_speed):
     for way in range(len(routes)): 
         color = colormap(avg_speed[way])
         w = min(avg_speed[way], 5)
-        folium.vector_layers.PolyLine(routes[way], color=color, weight=w).add_to(fg)
+        t = names[way]
+        folium.vector_layers.PolyLine(routes[way], tooltip=t, color=color, weight=w).add_to(fg)
 
     map.add_child(fg)
     map.add_child(colormap)
@@ -89,8 +92,8 @@ class PanelFoliumMap(param.Parameterized):
     def _update_map(self):
         self.map = get_map()
         self.df, self.d = get_df()
-        routes, avg_speed = compute_route_speed(self.df, self.d, start_h=self.start_hour, end_h=self.end_hour)
-        render_map(self.map, routes, avg_speed)
+        routes, avg_speed, names = compute_route_speed(self.df, self.d, start_h=self.start_hour, end_h=self.end_hour)
+        render_map(self.map, routes, avg_speed, names)
         self.folium_pane.object = self.map
 
 
@@ -100,7 +103,7 @@ class PanelFoliumMap(param.Parameterized):
 
 # panel serve tratte_by_speed.py
 
-ACCENT_COLOR = "#0047AB"
+ACCENT_COLOR = "#44AD49"
 template = pn.template.FastListTemplate(
         site="Map", 
         title="Route by Average Speed for selected Hour(s)", 
@@ -111,7 +114,7 @@ template = pn.template.FastListTemplate(
 
 
 # def main():
-#     ACCENT_COLOR = "#0047AB"
+#     ACCENT_COLOR = "#44AD49"
 #     template = pn.template.FastListTemplate(
 #         site="Map", 
 #         title="Route by Average Speed for selected Hour(s)", 
