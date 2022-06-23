@@ -68,7 +68,7 @@ La procedura di map-matching di Valhalla Docker restituisce i percorsi in una en
 Breve notebook che fornisce una visualizzazione interattiva delle trips, permettendo di selezionare trends a seconda della durata (in minuti), della distanza percorsa (in metri) e del numero di viaggi, differenziando gli andamenti per operatore fornente il servizio. La dashboard può essere visualizzata tramite il comando `panel serve trends_dashboard.ipynb`.
 
 ## analisi_temporale.ipynb
-Visualiiza i trend relativi alle corse in e-scooter considerando diversi periodi e suddivisioni temporali e in relazione a eventi dall'impatto ipoteticamente rilevante, quali il mutamento delle regole di utlizzo e l'introduzione di provvedimenti a livello nazionale per fronteggiare l'emergenza sanitaria.
+Visualizza i trend relativi alle corse in e-scooter considerando diversi periodi e suddivisioni temporali e in relazione a eventi dall'impatto ipoteticamente rilevante, quali il mutamento delle regole di utilizzo e l'introduzione di provvedimenti a livello nazionale per fronteggiare l'emergenza sanitaria.
 
 ## produce_dataset_speed_by_wayID.py & tratte_by_speed.py
 Producono rispettivamente il dataset `mm_wayID_speed_name.parquet` e la visualizzazione delle tratte per velocità di percorrenza. Il secondo script produce una dashboard che permette di selezionare le fasce orarie da visualizzare per confrontare le velocità medie con cui le varie strade vengono percorse a seconda dalle fasce orarie. La dashboard può essere comodamente consultata eseguendo `panel serve tratte_py_speed.py`.
