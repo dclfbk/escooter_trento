@@ -93,6 +93,11 @@ This study aims to infer e-scooter trips purposes, by associating to each trip o
 Among the 10 collections of POIs, the ones having the highest number of observations have been further analyzed to understand internal differentiation, leading again to several inferences on people behavior and habits.
 
 
+## [Investigating Potential Electric Micromobility Demand in the city of Rome, Italy](https://www.sciencedirect.com/science/article/pii/S2352146522001776)
+
+The paper investigates potential micro-mobility demand in the city of Rome. After cleaning the trips data from anomalies and noises, trips are clustered using DBSCAN algorithm into home-based and not home-based, according to the fact that either the origin or the destination is the place where the rider lives. Consequently, it is possible to combine considerations on the origins and destinations with temporal distribution, which may help to identify potential market segments. Finally, a Micro-mobility Compatibility Index is developed in order to take into account the characteristics of the road infrastructure. This index allows to estimate the impact of the roadway on the demand of e-bikes and e-scooters, for weekdays and weekends, and for home-based and not home-based trips.
+
+
 # Forecasting
 
 ## [Demand forecasting of micro mobility using a gated recurrent unit](https://www.sbt-durabi.org/articles/xml/0KVE/#idm413822888x)
