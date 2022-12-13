@@ -47,7 +47,7 @@ List and brief description of scripts and notebooks.
 
 *Cleaning* folder:  
 - `0_data_cleaning.py`: contains the steps performed to clean the data and remove noises, preparing them for further processing. All the operations performed are described at the beginning of the script.
-- `1_collect_weather_info.py`: script to collect data concerning the weather from the World Weather Portal; requires an API key in a congifuration file (check configuration paragraph below). The `1_nasa_weather_data.py` & `nasa_config.yaml` provide alternatives to collect weather data but they are unused in this project as the first source was more suitable for the purpose at hand.
+- `1_collect_weather_info.py`: script to collect data concerning the weather from the World Weather Portal; requires an API key in a congifuration file (check configuration paragraph below). 
 - `2_augment_data.py`: script to augment the data concerning e-scooters movements with the ones about weather, POIs, multimodality, and holidays. 
 - `2_compute_geohash.py`: script to compute geohash and perform grid division of the territory. 
 - `3_feature_importance.ipynb`: analysis of feature importance in predicting the target variable and reduction of redundant/not significant information.
