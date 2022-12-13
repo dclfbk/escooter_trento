@@ -1,0 +1,16 @@
+# Configuration to get weather historical data from NASA
+# https://power.larc.nasa.gov/data-access-viewer/
+
+# -------- Location --------
+# Location in latitude and longitude coordinates
+lat: 46.066667
+lon: 11.133333
+
+# Format: YYYYMMDD
+start_date: 20201130 # 2020-11-30, first day of data collection
+
+# Format: YYYYMMDD
+end_date: 20220504 # 2022-05-04, last day of data collection at the moment (done 17 July 2022)
+
+# Output directory for weather records
+output_dir: C:/Users/luisa/Desktop/thesis_project/data
