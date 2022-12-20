@@ -1,0 +1,25 @@
+# data folder
+data
+**.csv
+**.Rhistory
+
+# configurations and keys
+code/cleaning/config.py
+
+# discard folder and trails
+attempts
+code/deep_models/prove_gnnlstm.ipynb
+code/deep_models/lstm.ipynb
+imgs
+
+# others
+TODO.MD
+QUESTIONS.MD
+__pycache__
+
+# random forest models
+code/base_models/RF_EScooterDemandPrediction_AllFeatures.sav
+code/base_models/RF_EScooterDemandPrediction_MostImporantFeatures.sav
+
+# dependency (not used)
+code/deep_models/spektral.py 
