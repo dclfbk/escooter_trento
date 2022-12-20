@@ -8,6 +8,10 @@ import panel as pn
 import warnings
 warnings.filterwarnings("ignore")
 
+'''
+Velocità sulle strade battute dai monopattini per fasce orarie.
+'''
+
 
 def get_df():
     df = pd.read_parquet('C:/Users/luisa/Desktop/escooter_trento/data/mm_wayID_speed_name.parquet')
@@ -24,7 +28,7 @@ def compute_route_speed(df, d, start_h, end_h):
     data_selected = df.loc[(df.start_time.dt.hour >= start_h) & (df.start_time.dt.hour < end_h)].reset_index(drop=True)
     
     # build dictionary with wayID and average speed
-    # for the selcted hour (slide dataframe according to hour)
+    # for the selected hour (slide dataframe according to hour)
     way_speed = {}
     for i in range(len(data_selected)):
         # for ed, sp in zip(data_selected.at[i, 'edges_id'], data_selected.at[i, 'speeds_for_edge']): # speeds_for_edge --> from Valhalla MM
@@ -57,7 +61,7 @@ def render_map(map, routes, avg_speed, names):
     render the map 
     '''
     
-    colormap = cm.LinearColormap(colors=['gray', '#E7E56F', '#80C348', '#348538'],  # FFF79C
+    colormap = cm.LinearColormap(colors=['gray', '#E7E56F', '#80C348', '#348538'],  
                                 index = np.linspace(min(avg_speed), max(avg_speed), num=4),
                                 vmin = min(avg_speed), vmax = max(avg_speed), 
                                 caption='Speed at which ways have been passed through on average (in m/s)')
@@ -67,8 +71,12 @@ def render_map(map, routes, avg_speed, names):
     for way in range(len(routes)): 
         color = colormap(avg_speed[way])
         w = min(avg_speed[way], 5)
-        t = names[way]
-        folium.vector_layers.PolyLine(routes[way], tooltip=t, color=color, weight=w).add_to(fg)
+        t = names[way] + ' (average speed: ' + str(round(avg_speed[way], 2)) + 'm/s)'
+
+        iframe = folium.IFrame(names[way] + '<br>Average speed: ' + str(round(avg_speed[way], 2)) + 'm/s')
+        p = folium.Popup(iframe, min_width=300, max_width=300)
+
+        folium.vector_layers.PolyLine(routes[way], tooltip=t, popup=p, color=color, weight=w).add_to(fg)
 
     map.add_child(fg)
     map.add_child(colormap)
@@ -101,6 +109,7 @@ class PanelFoliumMap(param.Parameterized):
 
 ########################################
 
+# run using:
 # panel serve tratte_by_speed.py
 
 ACCENT_COLOR = "#44AD49"
@@ -110,19 +119,3 @@ template = pn.template.FastListTemplate(
         accent_base_color=ACCENT_COLOR, header_background=ACCENT_COLOR, theme='default', theme_toggle=False,
         main=["Select the desired time range by slicing to the extremes of the time interval", 
         PanelFoliumMap().view]).servable();
-
-
-
-# def main():
-#     ACCENT_COLOR = "#44AD49"
-#     template = pn.template.FastListTemplate(
-#         site="Map", 
-#         title="Route by Average Speed for selected Hour(s)", 
-#         accent_base_color=ACCENT_COLOR, header_background=ACCENT_COLOR, theme='default', theme_toggle=False,
-#         main=["Select the desired time range by slicing to the extremes of the time interval", 
-#         PanelFoliumMap().view]).show();
-#     return template
-
-
-# if __name__ == "__main__":
-#     main()
