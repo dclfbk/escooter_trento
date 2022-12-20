@@ -10,6 +10,10 @@ warnings.filterwarnings("ignore")
 
 '''
 Velocità sulle strade battute dai monopattini per fasce orarie.
+
+Esegui usando:
+
+panel serve tratte_by_speed.py
 '''
 
 
@@ -30,14 +34,17 @@ def compute_route_speed(df, d, start_h, end_h):
     # build dictionary with wayID and average speed
     # for the selected hour (slide dataframe according to hour)
     way_speed = {}
+    
     for i in range(len(data_selected)):
-        # for ed, sp in zip(data_selected.at[i, 'edges_id'], data_selected.at[i, 'speeds_for_edge']): # speeds_for_edge --> from Valhalla MM
-        for ed, sp in zip(data_selected.at[i, 'edges_id'], [data_selected.at[i, 'speed']]*len(data_selected.at[i, 'edges_id'])): 
+        sp = data_selected.at[i, 'speed'] # speed of the i-th trip
+        # for each edge/segment in the route of the i-th trip, add speed to the segment values
+        for ed in data_selected.at[i, 'edges_id']:
             if ed in way_speed.keys():
                 way_speed[ed].append(sp)
             else:
                 way_speed[ed] = []
                 way_speed[ed].append(sp)
+
     for k in way_speed.keys():
         avg = sum(way_speed[k]) / len(way_speed[k])
         way_speed[k] = avg
@@ -88,15 +95,16 @@ def render_map(map, routes, avg_speed, names):
 class PanelFoliumMap(param.Parameterized):
     start_hour = param.Integer(0, bounds=(0,23))
     end_hour = param.Integer(1, bounds=(0,23)) 
+    button = param.Action(lambda x: x.param.trigger('button'), label='Update Map')
         
     def __init__(self, **params):
         super().__init__(**params)
         self.map = get_map()
         self.folium_pane = pn.pane.plot.Folium(sizing_mode="stretch_both", min_height=500, min_width=900, margin=0) 
-        self.view = pn.Row(pn.Column(pn.pane.Markdown("## Settings"), self.param.start_hour,  self.param.end_hour), self.folium_pane)    
+        self.view = pn.Row(pn.Column(pn.pane.Markdown("## Settings"), self.param.start_hour,  self.param.end_hour, self.param.button), self.folium_pane)    
         self._update_map()
 
-    @param.depends("start_hour", "end_hour", watch=True)
+    @param.depends("button", watch=True) # "start_hour", "end_hour", 
     def _update_map(self):
         self.map = get_map()
         self.df, self.d = get_df()
@@ -109,13 +117,10 @@ class PanelFoliumMap(param.Parameterized):
 
 ########################################
 
-# run using:
-# panel serve tratte_by_speed.py
-
 ACCENT_COLOR = "#44AD49"
 template = pn.template.FastListTemplate(
         site="Map", 
         title="Route by Average Speed for selected Hour(s)", 
         accent_base_color=ACCENT_COLOR, header_background=ACCENT_COLOR, theme='default', theme_toggle=False,
-        main=["Select the desired time range by slicing to the extremes of the time interval", 
+        main=["Select the desired time range using the sliders and then click the button below to update the map.", 
         PanelFoliumMap().view]).servable();
