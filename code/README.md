@@ -75,3 +75,6 @@ Producono rispettivamente il dataset `mm_wayID_speed_name.parquet` e la visualiz
 
 ## trips_purposes.ipynb
 Analyzes trips and the closest Point of Interest (POI) to their destinations in order to infer their purpose. To do so, it first collects, cleans and clusters together POI data, and then uses a k-dimensional tree to find, among all POIs, the nearest neighbor to each destination. The association between the distance destination-POI is considered and a threshold on the maximum distance in put in place in order to increase the confidence of the final considerations. Thanks to this analysis, various comments on the way and reasons why people use these means of transport can be made.
+
+## trips_within_parks.py & parchi_giardini.ipynb  
+The python scripts contains functions to investigate movements of e-scooters within parks (Albere, Gocciadoro, Solzenicyn), and verify and visualize the speed when trips intersect these areas. The notebook is used to apply the functions and show how they work. 
