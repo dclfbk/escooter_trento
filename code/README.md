@@ -78,3 +78,10 @@ Analyzes trips and the closest Point of Interest (POI) to their destinations in 
 
 ## trips_within_parks.py & parchi_giardini.ipynb  
 The python scripts contains functions to investigate movements of e-scooters within parks (Albere, Gocciadoro, Solzenicyn), and verify and visualize the speed when trips intersect these areas. The notebook is used to apply the functions and show how they work. 
+
+## fuori_area.ipynb (fuori_area_clustering_functions.py + test_fuori_area_functions.ipynb)
+The notebook `fuori_area.ipynb` analyses out-of-area trajectories to highlight recurring violations. 
+Fréchet distance was used to calculate the similarity between trajectories with out-of-area points, and DBSCAN is then applied to construct clusters of similar trajectories.
+Finally the `fuori_area.html` map is produced and saved in the html folder.  
+`fuori_area_clustering_functions.py` collects the functions needed to filter trips moving outside the defined area, to compute similarities between trajectories, and to cluster together similar trajectories, in order to identify if there are recurrencies in the violations of the area.  
+The `test_fuori_area_functions.ipynb` notebook briefly displays how to use this functions.
