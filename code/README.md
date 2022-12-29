@@ -85,3 +85,6 @@ Fréchet distance was used to calculate the similarity between trajectories with
 Finally the `fuori_area.html` map is produced and saved in the html folder.  
 `fuori_area_clustering_functions.py` collects the functions needed to filter trips moving outside the defined area, to compute similarities between trajectories, and to cluster together similar trajectories, in order to identify if there are recurrencies in the violations of the area.  
 The `test_fuori_area_functions.ipynb` notebook briefly displays how to use this functions.
+
+## predict_demand.py
+Functions used to train and apply an ARIMA/SARIMA model.
