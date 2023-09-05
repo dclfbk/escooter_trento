@@ -1,25 +1,25 @@
 # escooter trento
-**Stage di Luisa Lo Presti**<br/>
-Analisi dei dati della mobilità su monopattino elettrico della città di Trento
+**Luisa Lo Presti internship**<br/>
+Analysis of mobility data on electric scooters in the city of Trento
 
-## Attività svolte: 
-Il Comune di Trento dispone di più [dataset](https://github.com/DigitalCommonsLab/escooter_trento/tree/main/data) con un periodo abbastanza ampio dell'uso dello sharing dei monopattini elettrici della città di Trento.<br/>
-Lo stage prevede un'attività di *analisi* di questi dati sviluppando poi *grafici* e *mappe interattive* attraverso cui poter prendere visione del _fenomeno del riuso monopattini elettrici_ a Trento e alle _ricadute sulla città_ in relazione a _punti di interesse_, _fasce orarie e confronti con altre modalità di trasporto_ (es. [autobus di linea](https://www.trentinotrasporti.it/open-data) o altre forme di condivisione di mezzi - esempio bikesharing)
+## Performed activities:
+The Municipality of Trento has more [dataset](https://github.com/DigitalCommonsLab/escooter_trento/tree/main/data) with a fairly wide period of the use of electric scooters in the city of Trento.<br/>
+The internship foresees an activity of *analysis* of this data, then developing *graphics* and *interactive maps* through which we can gain insight into the _reuse phenomenon of electric scooters_ in Trento and the _impact on the city_ in relation to _points of interest_, _time slots and comparisons with other modes of transport_ (e.g. [bus line](https://www.trentinotrasporti.it/open-data) or other forms of sharing vehicles - e.g. bikesharing)
 
-## Competenze attese:
-- Gestione di dati geospaziali
-- Analisi di traiettorie
-- Modalità di rappresentare l'informazione geografica e non
+## Expected competences
+- Geospatial data management
+- Analysis of trajectories
+- Ways of representing geographical and non-geographical information
 - 
-## Obiettivi formativi:
-- Analisi di dati spazio-temporali
-- Integrazione fra sorgenti dati diverse e loro analisi
-- Visualizzazione di dati e mappe
+## Learning objectives:
+- Analysis of spatio-temporal data
+- Integration of different data sources and their analysis
+- Visualisation of data and maps
 - 
 
-## Modalità di verifica degli apprendimenti:
-Meeting periodici con il tutor aziendale presentando lo stato di avanzamento dei compiti assegnati
-- sviluppo dei task attraverso Github (issue)
+## Methods for verifying learning:
+Periodic meetings with the FBK tutor presenting the progress of the assigned tasks
+- task development via Github (issue)
 - rilascio del codice attravero Github
 
 ## Tutor azienda: 
