@@ -15,15 +15,15 @@ The internship foresees an activity of *analysis* of this data, then developing 
 - Analysis of spatio-temporal data
 - Integration of different data sources and their analysis
 - Visualisation of data and maps
-- 
+
 
 ## Methods for verifying learning:
 Periodic meetings with the FBK tutor presenting the progress of the assigned tasks
 - task development via Github (issue)
-- rilascio del codice attravero Github
+- code release through Github
 
-## Tutor azienda: 
+## Tutor company: 
 Maurizio Napolitano
 
-## Modalità di svolgimento:
-mista
+## Mode of execution
+mixed
