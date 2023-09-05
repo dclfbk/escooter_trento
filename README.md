@@ -1,4 +1,7 @@
 # escooter trento
+
+![](/docs/logo.jpeg)
+
 **Luisa Lo Presti internship**<br/>
 Analysis of mobility data on electric scooters in the city of Trento
 
